@@ -1,0 +1,230 @@
+[contenteditable="true"]:focus {
+	outline: none;
+	box-shadow: 0 0 0.2em 0.1em #aaf;
+}
+[contenteditable="true"]:focus ~ * .facebook {
+	display: none;
+}
+
+.navigation > div {
+	margin: 0 1vh;
+}
+
+.menu .actions {
+	height: 5vh;
+}
+.menu .actions table {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+.menu .actions td {
+	text-align: center;
+	padding: 0;
+}
+.menu .actions td div {
+	display: inline-block;
+}
+.menu .actions td > div {
+	background: #fff;
+	width: 5vh;
+	height: 5vh;
+	border-radius: 0.5vh;
+	overflow: hidden;
+}
+.menu .actions td > div:hover {
+	background: #fa0;
+	cursor: pointer;
+}
+.menu > tbody > tr:last-of-type .move-down, .menu > tbody > tr:nth-of-type(2) .move-up {
+	opacity: 0;
+	pointer-events: none;
+}
+.menu .actions .arrow {
+	position: relative;
+	border: 2vh solid rgba(255, 255, 255, 0);
+	transform: scaleY(1.5);
+	-webkit-transform: scaleY(1.5);
+	-moz-transform: scaleY(1.5);
+	-ms-transform: scaleY(1.5);
+}
+.menu .actions .arrow.down {
+	top: 2.2vh;
+	border-top-color: #000;
+}
+.menu .actions .arrow.up {
+	top: -1.1vh;
+	border-bottom-color: #000;
+}
+.menu .actions .row {
+	margin: 5% 0;
+	background: #000;
+	height: 15%;
+	width: 80%;
+}
+.menu .actions .row:first-of-type {
+	margin-top: 17.5%;
+}
+.menu .actions .row.flag {
+	width: 53%;
+	margin-right: 2%;
+}
+.menu .actions .row.flag:first-of-type + div {
+	vertical-align: bottom;
+}
+.menu .actions .row.flag + div {
+	vertical-align: top;
+	width: 25%;
+	height: 25%;
+}
+.menu .actions .plus div {
+	background: #000;
+	width: 30%;
+	height: 80%;
+	margin-top: 10%;
+}
+.menu .actions .plus div:last-of-type {
+	margin-left: -30%;
+	transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+}
+.menu .actions .cross div {
+	background: #d55;
+	width: 20%;
+	height: 80%;
+	margin-top: 10%;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+}
+.menu .actions .cross div:last-of-type {
+	margin-left: -20%;
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+}
+.menu .actions .cross:hover {
+	background: #d66;
+}
+.menu .actions .cross:hover div {
+	background: #fff;
+}
+
+.logout > form {
+	display: inline;
+}
+.logout input {
+	display: inline;
+	background: none;
+	border: none;
+	color: #faa;
+	padding: 0;
+	border-bottom: 0.03em solid #faa;
+	font: inherit;
+}
+.logout input:hover {
+	color: #f55;
+	border-bottom-color: #f55;
+	cursor: pointer;
+}
+
+.controls, .control {
+	font-size: 0.9em;
+	width: 1em;
+	height: 1em;
+}
+.controls {
+	vertical-align: top;
+}
+.control {
+	vertical-align: sub;
+}
+
+.manual {
+	display: inline-block;
+	font-size: 0.6em;
+	margin-top: -0.6em;
+	margin-left: -0.15em;
+}
+.manual ~ .floppy {
+	margin-top: 0.4em;
+}
+.floppy, .floppy .cover > div {
+	display: inline-block;
+	background: #fff;
+}
+.floppy:hover {
+	cursor: pointer;
+}
+.floppy:hover, .floppy:hover .cover > div {
+	background: #fa0;
+}
+.floppy {
+	width: 1em;
+	height: 1em;
+	border-radius: 0.1em;
+}
+.floppy > div {
+	display: inline-block;
+	background: #000;
+}
+.floppy .line {
+	margin-top: 0.05em;
+	width: 0.8em;
+	height: 0.1em;
+	border-radius: 0.05em;
+}
+.floppy .line:first-of-type {
+	margin-top: 0.1em;
+}
+.floppy .cover {
+	margin-top: 0.08em;
+	width: 0.6em;
+	height: 0.4em;
+	border-radius: 0.07em;
+}
+.floppy .cover > div {
+	width: 0.15em;
+	height: 0.3em;
+	border-radius: 0.03em;
+	position: relative;
+	left: -0.15em;
+	top: 0.06em;
+}
+
+@media only screen and (orientation: portrait) {
+	.navigation > div {
+		margin: 0 0.6vw;
+	}
+	
+	.menu .actions {
+		height: 5vw;
+	}
+	.menu .actions td > div {
+		width: 5vw;
+		height: 5vw;
+		border-radius: 0.5vw;
+	}
+	.menu .actions .arrow {
+		border: 2vw solid rgba(255, 255, 255, 0);
+	}
+	.menu .actions .arrow.down {
+		top: 2.2vw;
+	}
+	.menu .actions .arrow.up {
+		top: -1.1vw;
+	}
+	
+	.save-btn {
+		margin: 2vw;
+	}
+	.save-btn div {
+		padding: 0.5vw 10vw;
+		font-size: 6vw;
+		border-radius: 1vw;
+	}
+}

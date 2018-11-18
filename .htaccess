@@ -1,0 +1,15 @@
+RewriteEngine On
+# This will enable the Rewrite capabilities
+
+RewriteCond %{HTTPS} !=on  [OR]
+# This checks to make sure the connection is not already HTTPS
+RewriteCond %{SERVER_NAME} !=takk.bar
+# This checks domain
+
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^(.*) https://takk.bar/$1 [R,L]
+# This rule will redirect all users to the same location but using HTTPS on takk.bar
+# i.e. http://www.takk.kylos.pl to https://takk.bar
+
+AddDefaultCharset utf-8

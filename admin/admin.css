@@ -1,0 +1,113 @@
+.logo > img {
+	height: 30vh;
+}
+.logo > div {
+	font-size: 6vh;
+}
+.logo.small > img {
+	height: 20vh;
+}
+.logo.small > div {
+	font-size: 4vh;
+}
+table {
+	z-index: 0 !important;
+}
+.auth-form, .msg {
+	margin: 2vh;
+}
+.auth-form input, .btn {
+	display: inline-block;
+	font-family: inherit;
+	font-size: 8vh;
+	margin: 0.125em;
+	color: #000;
+	background: #fff;
+	width: 6em;
+	padding: 0.125em 0.25em;
+	border-radius: 0.125em;
+	border: none;
+}
+.auth-form input[type=password].error {
+	background: #fdd;
+	box-shadow: inset 0 0 0.1875em 0.0625em #800;
+}
+.auth-form input[type=password] {
+	box-shadow: inset 0 0 0.1875em 0.0625em #666;
+}
+.auth-form input[type=submit], .btn {
+	cursor: pointer;
+}
+.auth-form input[type=submit]:hover, .btn:hover {
+	background: #fa0;
+}
+input:focus {
+	outline: none;
+}
+.msg {
+	font-size: 7vh;
+}
+.msg.error {
+	font-size: 5vh;
+	color: #d66;
+}
+.reset-form input {
+	font-size: 5vh;
+}
+.reset-form input {
+	font-family: inherit;
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: #fff;
+}
+.reset-form input:hover {
+	color: #fa0;
+}
+
+.menu-edit {
+	margin: 1em 0;
+	padding: 0;
+	width: 90vw;
+	height: 55vh;
+	resize: none;
+	font-size: 2vh;
+	border: none;
+}
+
+@media only screen and (orientation: portrait) {
+	.logo > img {
+		width: 46vw;
+		height: initial;
+	}
+	.logo > div {
+		font-size: 6vw;
+	}
+	.logo.small > img {
+		height: 20vw;
+	}
+	.logo.small > div {
+		font-size: 4vw;
+	}
+	.auth-form, .msg {
+		margin: 2vw;
+	}
+	.auth-form input, .btn {
+		font-size: 8vw;
+	}
+	.reset-form input {
+		font-size: 5vw;
+	}
+	.msg {
+		font-size: 7vw;
+	}
+	.msg.error {
+		font-size: 5vw;
+		color: #d66;
+	}
+	.menu-edit {
+		width: 90vw;
+		height: calc(100% - 55vw);
+		font-size: 2vw;
+	}
+}
